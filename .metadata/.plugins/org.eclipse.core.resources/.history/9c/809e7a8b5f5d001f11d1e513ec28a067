@@ -1,0 +1,8 @@
+package com.practice.test;
+
+public class Expense {
+	private int id;
+	private User user;
+	private List<Split> splits;
+
+}

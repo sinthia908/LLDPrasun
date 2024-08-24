@@ -1,0 +1,10 @@
+package com.interview.doctor;
+
+public class Doctor {
+	
+    private List<Slots> slots;
+	Doctor(){
+		super();
+	}
+
+}

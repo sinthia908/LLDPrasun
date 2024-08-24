@@ -1,0 +1,9 @@
+package com.interview.doctor;
+
+public class Slots {
+	private int id;
+	private Doctor doctor;
+	private Department name;
+	
+
+}

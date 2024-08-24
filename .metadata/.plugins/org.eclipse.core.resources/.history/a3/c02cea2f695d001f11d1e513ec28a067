@@ -1,0 +1,26 @@
+package com.practice.test;
+
+public abstract class Split {
+	private User user;
+	private double amount;
+	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
+	
+	Split(User user){
+		this.user = user;
+	}
+	
+	// Abstract method
+	public abstract double getAmount();
+	
+	
+
+}

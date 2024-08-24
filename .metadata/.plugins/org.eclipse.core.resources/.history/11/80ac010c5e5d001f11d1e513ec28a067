@@ -1,0 +1,9 @@
+package com.practice.test;
+
+public class EqualSplit implements Split{
+	
+	EqualSplit(User user){
+		this.user = user;
+	}
+
+}

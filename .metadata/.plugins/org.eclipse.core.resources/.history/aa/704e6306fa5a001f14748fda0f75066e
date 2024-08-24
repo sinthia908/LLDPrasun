@@ -1,0 +1,49 @@
+package com.interview.doctor;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
+// Represents a single time slot
+class Slot {
+	private int id;
+	private Doctor doctor;
+    private LocalTime startTime;
+    private LocalTime endTime;
+    private boolean isBooked;
+
+    public Slot(int id,LocalTime startTime, LocalTime endTime) {
+    	this.id = id;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.isBooked = false; // Default to available
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public boolean isBooked() {
+        return isBooked;
+    }
+
+    public void setBooked(boolean booked) {
+        isBooked = booked;
+    }
+
+    @Override
+    public String toString() {
+        return "Slot{" +
+                "startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", isBooked=" + isBooked +
+                '}';
+    }
+}
+	
+	
+

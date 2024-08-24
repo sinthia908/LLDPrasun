@@ -1,0 +1,15 @@
+package com.practice;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		CacheService cacheService = new CacheService();
+		cacheService.createCache(3);
+		cacheService.addPage(1);
+		cacheService.addPage(2);
+		cacheService.addPage(3);
+		cacheService.addPage(4);
+
+	}
+
+}

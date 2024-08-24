@@ -1,0 +1,15 @@
+package mediator;
+
+import java.util.*;
+
+
+import colleague.Colleague;
+
+public class Auction implements AuctionMediator{
+	
+	ArrayList<Colleague> colleagues = new ArrayList<>();
+
+
+
+
+}

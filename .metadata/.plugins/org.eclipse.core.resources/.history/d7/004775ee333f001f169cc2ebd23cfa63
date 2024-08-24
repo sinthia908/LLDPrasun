@@ -1,0 +1,46 @@
+package com.practice;
+
+public class CacheService {
+	
+	private Cache cache; 
+	
+	
+	public Cache createCache(int size) {
+		cache = new Cache(size);
+		return cache;
+		
+	}
+
+// Add page for a LRU cache 
+	public void addPage(int m) {
+		if ( ! cache.getHashSet().contains(m)) {
+	  if ( cache.getLinkedList().size() == cache.getSize()) {
+		   int x = cache.getLinkedList().removeLast();
+		   cache.getHashSet().remove(x);
+		   System.out.print("Removed the page");
+	       }
+		}
+	  
+	  else 
+	  {
+		  cache.getLinkedList().remove(m);
+		  
+		  }
+		
+		  cache.getHashSet().add(m);
+		  cache.getLinkedList().push(m);
+		  System.out.print("Added the page");
+		  
+	  }
+	
+	public void addPageforLFU(int value) {
+          if (!cache.getLFUcache().containsKey(value)) {
+        	  insert(value);
+        	  else
+        	  increment(value);	  
+          }		
+	}
+		
+	}
+
+

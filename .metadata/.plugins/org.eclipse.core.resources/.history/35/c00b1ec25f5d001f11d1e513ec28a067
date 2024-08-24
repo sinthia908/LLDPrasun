@@ -1,0 +1,11 @@
+package com.practice.test;
+
+public class PercentSplit {
+	
+	private double percent;
+	
+    PercentSplit(){
+    	super();
+    }
+
+}

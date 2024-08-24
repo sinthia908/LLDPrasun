@@ -1,0 +1,28 @@
+package com.practice.heap;
+
+/*
+Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
+Output: 4*/
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+
+
+class Pair{
+	int profit;
+	int capital;
+	
+	Pair(int profit,int capital){
+		this.profit = profit;
+		this.capital = capital;
+	}
+}

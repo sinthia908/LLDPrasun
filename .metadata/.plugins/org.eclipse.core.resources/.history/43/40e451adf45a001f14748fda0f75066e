@@ -1,0 +1,17 @@
+package com.interview.doctor;
+
+import java.util.List;
+
+public class DocController {
+	
+	
+	List<Doctors> docList;
+	List<Patient> patientList
+	
+	DocController(){
+	
+	List<Doctors>	
+		
+	}
+
+}

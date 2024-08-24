@@ -1,0 +1,27 @@
+package com.interview.doctor;
+
+import java.util.*;
+
+public class DocController {
+	
+	
+	
+	Map<Integer,Doctor> doctors;
+	Map<Integer,Patient> patients;
+	Map<Integer,Department> departments;
+	
+	
+	public DocController() {
+		
+	doctors = new ConcurrentHashMap<>();
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+
+}

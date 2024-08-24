@@ -1,0 +1,12 @@
+package com.practice.test;
+
+import java.util.*;
+
+
+public class Expense {
+	private int id;
+	private User user;
+	private List<Split> splits;
+	
+
+}

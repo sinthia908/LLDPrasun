@@ -1,0 +1,10 @@
+package mediator;
+
+public interface AuctionMediator {
+	
+	public void addBider();
+	
+	public void placeBid();
+	
+
+}

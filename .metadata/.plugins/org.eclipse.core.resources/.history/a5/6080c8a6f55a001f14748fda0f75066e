@@ -1,0 +1,19 @@
+package com.interview.doctor;
+
+import java.util.*;
+
+public class Department {
+	private int id;
+	private String Name;
+	private List<Doctor> doctorsList;
+    private DepartmentType depType;
+    
+    
+    public Department(int id,String name,List<Doctor> doctorsList,DepartmentType depType) {
+    	
+    	
+    }
+	
+
+}
+

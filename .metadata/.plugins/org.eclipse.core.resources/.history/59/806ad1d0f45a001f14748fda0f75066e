@@ -1,0 +1,16 @@
+package com.interview.doctor;
+
+import java.util.List;
+
+public class DocController {
+	
+	
+	Map<Integer,Doctor> doctors;
+	Map<Integer,Patient> patients;
+	
+	
+	
+	
+	
+
+}

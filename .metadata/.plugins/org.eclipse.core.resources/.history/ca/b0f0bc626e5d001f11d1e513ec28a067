@@ -1,0 +1,11 @@
+package com.practice.test;
+
+import java.util.*;
+
+public class SplitwiseService {
+	
+	private static SplitwiseService instance;
+	private static Map<Integer,User> users;
+	
+
+}

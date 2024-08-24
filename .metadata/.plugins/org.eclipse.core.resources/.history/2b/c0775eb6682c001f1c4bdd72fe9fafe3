@@ -1,0 +1,50 @@
+package com.practice.heap;
+
+import java.util.PriorityQueue;
+
+/*
+Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
+Output: 4*/
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PriorityQueue<Pair> pq = new PriorityQueue<>(5,new PairComparator()); 
+
+	}
+
+}
+
+
+
+class PairComparator<Pair> implements Comparable<Pair>{
+
+	@Override
+	public int compare(Pair p1,Pair p2) {
+		// TODO Auto-generated method stub
+		
+		if ( p1.capital > p2.ca)
+		return 0;
+	}
+	
+	
+	
+	
+}
+
+
+
+
+
+
+class Pair{
+	public int profit;
+	public int capital;
+	
+	Pair(int profit,int capital){
+		this.profit = profit;
+		this.capital = capital;
+	}
+}

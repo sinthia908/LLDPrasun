@@ -1,0 +1,97 @@
+// Subarray with given sum (Non-Negative Numbers)
+
+package com.practice;
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	  int arr[] = {1,2,3};
+	  
+	//  SubarrayPresent(arr,19);
+	  
+	   int k = 2;
+	  
+	   System.out.print(getSubarray(arr,k);
+	  
+	}
+	
+ // Implementation using sliding window 
+	private static int subArrayPresentOptimize(int[] arr, int sum) {
+		int currentSum = arr[0];
+		int start=0;
+		int i;
+		
+		for( i=1 ; i<arr.length ; i++) {
+		while (currentSum > sum && start<i-1) {
+			  currentSum-=arr[start];
+			  start--;
+		}
+		
+		if ( currentSum == sum) {
+	         int p=i-1;
+	         System.out.print("Subarray found between index" + start +"and "+ p);
+	         return 1;
+		}
+		
+		if ( i<arr.length) 
+		     currentSum = currentSum + arr[i];
+	
+		}
+		
+		System.out.println("No subarray found");
+        return 0;	
+		
+	}
+	
+	
+	
+	
+	private static int getSubarray(int[] arr,int target) {
+		int left = 0;
+		int sum = 0;
+		int count = 0;
+		
+		
+		for(int right=0 ; right<arr.length ; right++) {
+		    sum += arr[right];
+		    while ( left < arr.length && sum > target) {
+                    sum -= arr[left];
+                    left++;
+                    }
+		    if ( sum == target) {
+		    	 System.out.print("The indexes found between indexes" + left +" "+right);
+	          }
+		}
+	}
+
+
+
+
+	private static void SubarrayPresent(int[] arr,int sum) {
+		int currentSum = 0;
+		for(int i=0 ; i < arr.length ;i++) {
+			currentSum = arr[i];
+			if ( currentSum == sum) {
+				System.out.print("Subarray found at index " + i);
+				return;
+			}
+			else {
+				for(int j=i+1;j<arr.length;j++) {
+					currentSum+=arr[j];
+					if ( currentSum==sum) {
+						System.out.print("Subarray found at index " + i + j);
+						return;
+					}
+				}
+			}
+			
+		}
+		
+		 System.out.println("No subarray found");
+	        return;
+		
+	}
+
+}

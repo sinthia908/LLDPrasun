@@ -1,0 +1,9 @@
+package com.interview.doctor;
+
+public enum Slot {
+	6:30_7:30;
+	
+	
+
+
+}

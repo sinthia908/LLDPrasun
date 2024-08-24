@@ -1,0 +1,12 @@
+package com.interview.doctor;
+
+import java.util.*;
+
+public class Doctor {
+	
+    private List<Slots> slots;
+	Doctor(){
+		super();
+	}
+
+}

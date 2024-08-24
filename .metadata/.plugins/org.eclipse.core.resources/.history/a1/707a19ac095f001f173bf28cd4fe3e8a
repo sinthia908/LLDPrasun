@@ -1,0 +1,66 @@
+package com.practice.test;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+
+
+public class SplitwiseService {
+	
+	private static SplitwiseService instance;
+	private static Map<Integer,User> users;
+	private static Map<Integer,Group> groups;
+	
+	
+	SplitwiseService(){
+		users = new ConcurrentHashMap<>();	
+		groups = new ConcurrentHashMap<>();	
+	}
+	
+	
+	// Singleton Pattern
+	public static SplitwiseService getInstance() {
+		if (instance == null)
+			instance = new SplitwiseService();
+		return instance;
+	}
+	
+	
+    // Add expense 
+	
+	public void addExpense(String groupId , Expense expense) {
+		Group group = groups.get(groupId);
+		if (group != null) {
+		    group.addExpense(expense);
+		    splitExpense(expense);
+		    updateBalance(expense);    
+		}
+		
+	}
+
+	// Split the expenses across the groups 
+	
+	public void splitExpense(Expense expense) {
+		double totalAmount = expense.getAmount();
+		List<Split> splits = expense.getSplits();
+		int totalSplits = splits.size();
+		
+		double splitAmount = totalAmount / totalSplits;
+		
+		for(Split split : splits) {
+			if ( split instanceof EqualSplit) {
+				split.setAmount(splitAmount);
+			}
+			else if ( split instanceof PercentSplit percentSplit) {
+                split.setAmount(totalAmount * percentSplit.getPercent() / 100.0);				
+			}
+		}
+
+	}
+
+	
+	// update the balances for the user
+	
+	
+	
+
+}

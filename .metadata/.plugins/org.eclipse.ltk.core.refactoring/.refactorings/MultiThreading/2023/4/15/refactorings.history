@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.practice.Worker&apos; to &apos;Prime&apos;&#x0D;&#x0A;- Original project: &apos;MultiThreading&apos;&#x0D;&#x0A;- Original element: &apos;com.practice.Worker&apos;&#x0D;&#x0A;- Renamed element: &apos;com.practice.Prime&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Worker&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.practice{Worker.java[Worker" matchStrategy="1" name="Prime" qualified="false" references="true" similarDeclarations="false" stamp="1681224635017" textual="false" version="1.0"/>
+</session>

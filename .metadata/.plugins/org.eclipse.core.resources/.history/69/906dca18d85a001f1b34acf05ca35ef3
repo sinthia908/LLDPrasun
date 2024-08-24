@@ -1,0 +1,9 @@
+package com.interview.doctor;
+
+public class Doctor {
+	
+	Doctor(){
+		super();
+	}
+
+}

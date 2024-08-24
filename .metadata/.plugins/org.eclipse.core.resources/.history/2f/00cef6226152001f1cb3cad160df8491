@@ -1,0 +1,22 @@
+package com.interview;
+
+import java.util.List;
+
+public class Restuarant {
+	
+	private int id;
+	private String name;
+	private String address;
+	private List<MenuItems> menuItem;
+	
+	
+	pubic Restuarant(int id,String name,String address,List<MenuItems> menuItems) {
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.menuItems = menuItems;
+	}
+	
+		
+
+}

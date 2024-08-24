@@ -1,0 +1,13 @@
+package com.practice.test;
+
+public abstract class Split {
+	private User user;
+	private double amount;
+	
+	Split(User user){
+		this.user = user;
+	}
+	
+	
+
+}

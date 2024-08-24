@@ -1,0 +1,21 @@
+package com.interview;
+
+import java.util.List;
+
+public class Order {
+
+	private int id;
+	private Customer customer;
+	private Restuarant restuarant;
+	private List<OrderItem> orderItems;
+	private OrderStatus orderstatus;
+	
+	
+	public Order(int id,Customer customer,Restuarant restuarant) {
+		this.id = id;
+		this.customer = customer;
+		this.restuarant = restuarant;
+		this.orderItems = orderItems;
+	}
+	
+}

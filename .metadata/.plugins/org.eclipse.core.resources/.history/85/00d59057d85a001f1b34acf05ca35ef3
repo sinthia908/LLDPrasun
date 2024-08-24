@@ -1,0 +1,10 @@
+package com.interview.doctor;
+
+import java.util.*;
+
+public class Department {
+	private int id;
+	private String Name;
+	private List<Doctor> doctorsList;
+
+}

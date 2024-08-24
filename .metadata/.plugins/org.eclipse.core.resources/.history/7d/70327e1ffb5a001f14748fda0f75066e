@@ -1,0 +1,11 @@
+package com.interview.doctor;
+
+public class Booking {
+	
+	private int id;
+	private Doctor doctor;
+	private Patient patient;
+	private Department department;
+	
+
+}

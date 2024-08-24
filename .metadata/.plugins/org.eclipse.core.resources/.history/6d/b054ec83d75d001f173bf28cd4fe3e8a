@@ -1,0 +1,32 @@
+package com.practice.test;
+
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+
+
+public class SplitwiseService {
+	
+	private static SplitwiseService instance;
+	private static Map<Integer,User> users;
+	private static Map<Integer,Group> groups;
+	
+	
+	SplitwiseService(){
+		users = new ConcurrentHashMap<>();	
+		groups = new ConcurrentHashMap<>();	
+	}
+	
+	
+	// Singleton Pattern
+	public static SplitwiseService getInstance() {
+		if (instance == null)
+			instance = new SplitwiseService();
+		return instance;
+	}
+	
+	
+		
+	
+	
+
+}

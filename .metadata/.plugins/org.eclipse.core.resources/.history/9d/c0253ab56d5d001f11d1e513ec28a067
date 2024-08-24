@@ -1,0 +1,14 @@
+package com.practice.test;
+
+import java.util.*;
+import java.io.*;
+
+public class Expense {
+	private int id;
+	private double amount;
+	private User user;
+	private User paidBy;
+	private List<Split> splits;
+	
+
+}
