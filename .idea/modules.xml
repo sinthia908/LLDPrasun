@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/HotelBookingSystem/HotelBookingSystem.iml" filepath="$PROJECT_DIR$/HotelBookingSystem/HotelBookingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LLDPrasun.iml" filepath="$PROJECT_DIR$/.idea/LLDPrasun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OnlineShopping/OnlineShopping.iml" filepath="$PROJECT_DIR$/OnlineShopping/OnlineShopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/PubSub/PubSub.iml" filepath="$PROJECT_DIR$/PubSub/PubSub.iml" />
     </modules>
   </component>
