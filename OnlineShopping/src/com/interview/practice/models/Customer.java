@@ -4,6 +4,11 @@ import java.util.UUID;
 
 public class Customer {
     private final String id;
+
+    public Address getShippingAddress() {
+        return shippingAddress;
+    }
+
     private final String name;
     private final String email;
     private final Account account;

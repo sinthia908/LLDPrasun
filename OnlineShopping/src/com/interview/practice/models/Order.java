@@ -20,10 +20,8 @@ public class Order extends ConcreteObserver {
     private OrderStatus orderStatus;
     private OrderState currentSate;
 
-    private Order(Customer customer,List<OrderLineItem> lineItemList,
-                  Address shippingAddress,double totalAmount,
-                  LocalDateTime orderDate,OrderStatus orderStatus,
-                  OrderState orderState){
+    public Order(Customer customer, List<OrderLineItem> lineItemList,
+                 Address shippingAddress, double totalAmount){
         this.id = UUID.randomUUID().toString();
         this.customer = customer;
         this.lineItemList = lineItemList;

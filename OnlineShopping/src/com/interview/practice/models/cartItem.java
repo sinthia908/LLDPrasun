@@ -24,7 +24,7 @@ public class cartItem {
     }
 
     public double getPrice(){
-           return product.getClass()
+           return product.getPrice();
     }
 
 
