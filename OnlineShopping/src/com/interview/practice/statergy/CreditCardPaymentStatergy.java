@@ -1,6 +1,6 @@
 package com.interview.practice.statergy;
 
-public class CreditCardPaymentStatergy extends PaymentStatergy{
+public class CreditCardPaymentStatergy implements PaymentStatergy{
 
     private final String cardNumber;
 

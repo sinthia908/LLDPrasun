@@ -21,6 +21,15 @@ public abstract class Product {
 
     public static class BaseProduct extends Product{
 
+        public BaseProduct(String id, String name, double price, String description, ProductCategory productCategory) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.description = description;
+            this.productCategory = productCategory;
+        }
+
+
         @Override
         public String getId() {
             return id;
@@ -65,7 +74,7 @@ public abstract class Product {
                return this;
         }
 
-        public Builder withProductCategory(ProductCategory productCategory){
+        public Builder withCategory(ProductCategory productCategory){
             this.productCategory = productCategory;
             return this;
         }

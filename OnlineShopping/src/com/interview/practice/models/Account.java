@@ -1,6 +1,5 @@
 package com.interview.practice.models;
 
-import jdk.tools.jlink.internal.plugins.StripNativeCommandsPlugin;
 
 public class Account {
 
@@ -12,6 +11,12 @@ public class Account {
     public Account(String userName,String password){
          this.userName = userName;
          this.password = password;
+         this.cart = new ShoppingCart();
+
+    }
+
+    public ShoppingCart getCart() {
+        return cart;
     }
 }
 

@@ -18,7 +18,7 @@ public class Order extends ConcreteObserver {
     private final double totalAmount;
     private final LocalDateTime orderDate;
     private OrderStatus orderStatus;
-    private OrderState currentSate;
+    private OrderState currentState;
 
     public Order(Customer customer, List<OrderLineItem> lineItemList,
                  Address shippingAddress, double totalAmount){
@@ -28,7 +28,7 @@ public class Order extends ConcreteObserver {
         this.shippingAddress = shippingAddress;
         this.totalAmount = totalAmount;
         this.orderDate = LocalDateTime.now();
-        this.currentSate = null;
+        this.currentState = null;
        // addObserver(customer);
 
     }
@@ -38,6 +38,39 @@ public class Order extends ConcreteObserver {
     //public void shipOrder();
     //public void deliverOrder();
     // public void cancelOrder();
+
+    public List<OrderLineItem> getLineItemList() {
+        return lineItemList;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Address getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public OrderState getCurrentState() {
+        return currentState;
+    }
+
 
 
 }
