@@ -30,7 +30,9 @@ public class BookingService {
 
   // Check if any requested seat is already locked
 
-       if ( roomAvalabilityService.isRoomAvailable(meetingRoom,timeSlot))
+       if (!roomAvalabilityService.isRoomAvailable(meetingRoom.getMeetingRoomid(),timeSlot))
+           System.out.println("Room :" + meetingRoom.getRoomName() + "is already booked for the time slot " + timeSlot);
+
 
        // Lock the seats temporarily for the user (this will throw an exception if any seat is already locked)
        lockRoomProvider.LockRooms(timeSlot,meetingRoom,organizer);
@@ -41,31 +43,36 @@ public class BookingService {
 
        Meeting newBooking = new Meeting(meetingId,meetingRoom,timeSlot,organizer,participants);
 
+       System.out.println("Successfully booked meeting room");
+
+       meetingRepository.save(newBooking);
+
        return newBooking;
    }
 
 
    // Confirm booking
 
-    public void confirmBooking(MeetingRoom meetingRoom,User user,TimeSlot timeSlot) throws Exception {
+    public void confirmBooking(Meeting meeting) throws Exception {
 
-       if (!lockRoomProvider.validateLock(timeSlot,meetingRoom,user))
-           throw new Exception("Lock is Expired");
+        MeetingRoom meetingRoom = meeting.getMeetingRoom();
+        User user = meeting.getHost();
+        TimeSlot timeSlot = meeting.getTimeSlot();
+
+        if (!lockRoomProvider.validateLock(timeSlot, meetingRoom, user)) {
+            throw new Exception("Lock is Expired");
+        }
 
 
-        meetingRoom.setMeetingStatus(MeetingStatus.CONFIRMED);
-      //  meetingRepository.update(meeting);
+        meeting.setMeetingStatus(MeetingStatus.CONFIRMED);
+
+        meetingRepository.update(meeting);
 
         lockRoomProvider.unlockRoom(
                 timeSlot,
                 meetingRoom,
-                user);
-
+                user
+        );
     }
-
-
-
-    // UNlock
-
 
 }

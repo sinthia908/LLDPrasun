@@ -1,11 +1,9 @@
 package com.interview.practice.lock;
 
-import com.interview.practice.domain.Calendar;
 import com.interview.practice.domain.MeetingRoom;
 import com.interview.practice.domain.TimeSlot;
 import com.interview.practice.domain.User;
 
-import java.util.Date;
 import java.util.List;
 
 public interface ILockRoomProvider {

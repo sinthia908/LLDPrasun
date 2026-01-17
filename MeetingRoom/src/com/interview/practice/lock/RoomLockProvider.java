@@ -47,16 +47,14 @@ public class RoomLockProvider implements ILockRoomProvider{
     public void LockRooms(TimeSlot slot, MeetingRoom meetingRoom, User user) {
         Map<MeetingRoom,Lock> roomLocks = locks.computeIfAbsent(slot,s-> new ConcurrentHashMap<>());
         synchronized (roomLocks){
-               Lock exitinglock= roomLocks.get(meetingRoom);
-                    if (!exitinglock.isLockExpired()){
+               Lock exitinglock  = roomLocks.get(meetingRoom);
+                    if (exitinglock != null && !exitinglock.isLockExpired()){
                         System.out.print("");
                     }
                 }
-
-
             // All Seats Available lock them together
 
-            Date date = new Date();
+                Date date = new Date();
 
                 Lock lock = new Lock(meetingRoom,slot,timeOutInSeconds,date,user);
                 roomLocks.put(meetingRoom,lock);

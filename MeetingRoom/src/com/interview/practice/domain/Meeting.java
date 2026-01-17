@@ -11,6 +11,7 @@ public class Meeting {
     private final TimeSlot timeSlot;
     private final User host;
     private final List<User> participants;
+    private  MeetingStatus meetingStatus;
 
     public Meeting(String meetingId, MeetingRoom meetingRoom, TimeSlot timeSlot, User host, List<User> participants){
            this.meetingId = meetingId;
@@ -35,6 +36,18 @@ public class Meeting {
     }
 
     public List<User> getParticipants() {
-        return participants;
+        return participants;}
+
+    public MeetingRoom getMeetingRoom() {
+        return meetingRoom;
     }
+
+    public MeetingStatus getMeetingStatus() {
+        return meetingStatus;
+    }
+
+    public void setMeetingStatus(MeetingStatus meetingStatus){
+          this.meetingStatus = meetingStatus;
+    }
+
 }

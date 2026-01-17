@@ -8,6 +8,8 @@ public interface MeetingRepository {
 
    void save(Meeting meeting);
 
+   void update(Meeting meeting);
+
    List<Meeting> findByUser(String roomId);
 
    List<Meeting> findByRoom(String userId);
