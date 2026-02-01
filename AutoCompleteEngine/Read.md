@@ -1,0 +1,5 @@
+- Design and implement the core logic for an auto-complete engine used in a text editor or IDE.
+- The engine should suggest completions as the user types text based on previously stored entries and usage context.
+- Given a prefix (e.g., pri), suggest the top matching words or symbols (e.g., print, private, printf).
+- Return suggestions in sorted order based on frequency of usage or relevance.
+- Create strategy based on frequency of usage or relevance only
