@@ -4,7 +4,7 @@ import java.util.Set;
 
 import java.util.Set;
 
-public class Suggestion {
+public class    Suggestion {
 
     public String text;
     public int frequency;

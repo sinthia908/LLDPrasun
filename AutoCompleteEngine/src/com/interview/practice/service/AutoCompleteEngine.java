@@ -26,7 +26,7 @@ public class AutoCompleteEngine {
 
         // 2️⃣ Strategy selection (Factory responsibility)
         RankingStatergy strategy =
-                RankingStatergyFactory.getStrategy(context);
+                RankingStatergyFactory.getStatergy(context);
 
         // 3️⃣ Ranking + projection (Strategy responsibility)
         return strategy.rank(matches, context)
