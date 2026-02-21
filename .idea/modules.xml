@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" filepath="$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" />
       <module fileurl="file://$PROJECT_DIR$/CustomerSupportAgentRatingSystem/CustomerSupportAgentRatingSystem.iml" filepath="$PROJECT_DIR$/CustomerSupportAgentRatingSystem/CustomerSupportAgentRatingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/DIgitalWallet/DIgitalWallet.iml" filepath="$PROJECT_DIR$/DIgitalWallet/DIgitalWallet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HitCounter/HitCounter.iml" filepath="$PROJECT_DIR$/HitCounter/HitCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/HotelBookingSystem/HotelBookingSystem.iml" filepath="$PROJECT_DIR$/HotelBookingSystem/HotelBookingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/InMemoryFileSystem/InMemoryFileSystem.iml" filepath="$PROJECT_DIR$/InMemoryFileSystem/InMemoryFileSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LLDPrasun.iml" filepath="$PROJECT_DIR$/.idea/LLDPrasun.iml" />
@@ -13,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/OnlineMusicStreaming/OnlineMusicStreaming.iml" filepath="$PROJECT_DIR$/OnlineMusicStreaming/OnlineMusicStreaming.iml" />
       <module fileurl="file://$PROJECT_DIR$/OnlineShopping/OnlineShopping.iml" filepath="$PROJECT_DIR$/OnlineShopping/OnlineShopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/PubSub/PubSub.iml" filepath="$PROJECT_DIR$/PubSub/PubSub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SnakeAndLadder/SnakeAndLadder.iml" filepath="$PROJECT_DIR$/SnakeAndLadder/SnakeAndLadder.iml" />
     </modules>
   </component>
 </project>
