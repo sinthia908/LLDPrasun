@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/MeetingRoom/MeetingRoom.iml" filepath="$PROJECT_DIR$/MeetingRoom/MeetingRoom.iml" />
       <module fileurl="file://$PROJECT_DIR$/OnlineMusicStreaming/OnlineMusicStreaming.iml" filepath="$PROJECT_DIR$/OnlineMusicStreaming/OnlineMusicStreaming.iml" />
       <module fileurl="file://$PROJECT_DIR$/OnlineShopping/OnlineShopping.iml" filepath="$PROJECT_DIR$/OnlineShopping/OnlineShopping.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ParkingLot/ParkingLot.iml" filepath="$PROJECT_DIR$/ParkingLot/ParkingLot.iml" />
       <module fileurl="file://$PROJECT_DIR$/PubSub/PubSub.iml" filepath="$PROJECT_DIR$/PubSub/PubSub.iml" />
       <module fileurl="file://$PROJECT_DIR$/SnakeAndLadder/SnakeAndLadder.iml" filepath="$PROJECT_DIR$/SnakeAndLadder/SnakeAndLadder.iml" />
     </modules>
