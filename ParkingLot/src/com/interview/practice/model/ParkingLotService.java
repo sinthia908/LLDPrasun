@@ -26,8 +26,8 @@ public class ParkingLotService {
         if (spot != null) {
             spot.parkVehicle(vehicle);
             System.out.println("Vehicle parked successfully in spot:" + spot.getSpotNumber());
+            return spot;
         }
-        return spot;
         System.out.println(
                  "No parking spots available for " + vehicle.getVehicleType() + "!");
         return null;

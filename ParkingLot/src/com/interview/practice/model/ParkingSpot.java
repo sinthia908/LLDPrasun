@@ -13,7 +13,6 @@ public abstract class ParkingSpot {
            this.spotNumber = spotNumber;
            this.isOccupied = false;
            this.spotType = spotType;
-
     }
 
    // Method to check if the spot is occupied

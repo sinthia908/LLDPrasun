@@ -6,7 +6,7 @@ public abstract class Vehicle {
     private ParkingFeeStratergy parkingFeeStratergy; // Strategy for calculating parking fees
     // Constructor to initialize a vehicle with its license plate, type, and fee strategy
 
-    public Vehicle(String licenseNumber,VehicleType vehicleType,ParkingFeeStratergy parkingFeeStratergy){
+    public Vehicle(String licenseNumber,String vehicleType,ParkingFeeStratergy parkingFeeStratergy){
            this.licenseNumber = licenseNumber;
            this.vehicleType = vehicleType;
            this.parkingFeeStratergy = parkingFeeStratergy;

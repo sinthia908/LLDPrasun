@@ -1,6 +1,13 @@
 package com.interview.practice.model;
 
-public class BikeParkingSpot {
+public class BikeParkingSpot extends ParkingSpot{
 
-    public BikeParkingSpot(int spotNumber,)
+    public BikeParkingSpot(int spotNumber,String spotType){
+          super(spotNumber,spotType);
+    }
+
+    @Override
+    public boolean canParkVehicle(Vehicle vehicle) {
+        return "Bike".equalsIgnoreCase(vehicle.getVehicleType());
+    }
 }
