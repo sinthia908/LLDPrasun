@@ -1,6 +1,6 @@
 package com.interview.practice.Controller;
 
-import com.interview.practice.Algoithms.IRateLimiter;
+import com.interview.practice.Algorithms.IRateLimiter;
 import com.interview.practice.Enums.RateLimiterType;
 import com.interview.practice.factory.RateLimiterFactory;
 

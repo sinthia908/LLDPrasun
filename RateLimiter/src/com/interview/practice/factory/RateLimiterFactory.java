@@ -1,7 +1,7 @@
 package com.interview.practice.factory;
 
-import com.interview.practice.Algoithms.IRateLimiter;
-import com.interview.practice.Algoithms.TokenBucketStrategy;
+import com.interview.practice.Algorithms.IRateLimiter;
+import com.interview.practice.Algorithms.TokenBucketStrategy;
 import com.interview.practice.Enums.RateLimiterType;
 
 import java.util.HashMap;

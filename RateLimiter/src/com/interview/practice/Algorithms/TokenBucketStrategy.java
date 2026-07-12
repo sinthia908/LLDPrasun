@@ -1,4 +1,4 @@
-package com.interview.practice.Algoithms;
+package com.interview.practice.Algorithms;
 
 
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class TokenBucketStrategy implements IRateLimiter {
     private final int bucketCapacity;  // Maximum tokens per bucket.
-    private volatile int refreshRate;  // Tokens added per refill interval (per second).
+    private volatile int refreshRate;  // Tokens added per refill i   nterval (per second).
 
     // Global token bucket used when no key is provided.
     private final Bucket globalBucket;

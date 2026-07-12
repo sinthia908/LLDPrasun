@@ -1,4 +1,4 @@
-package com.interview.practice.Algoithms;
+package com.interview.practice.Algorithms;
 
 
 import java.util.Map;
