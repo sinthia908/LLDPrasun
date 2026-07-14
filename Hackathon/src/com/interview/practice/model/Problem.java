@@ -1,11 +1,6 @@
 package com.interview.practice.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Problem {
 
@@ -21,20 +16,18 @@ public class Problem {
     // Users who solved this problem
     private final List<SolutionRecord> solutions;
 
-    public Problem(String id,
-                   String name,
+    public Problem(String name,
                    String description,
                    String tag,
                    Difficulty difficulty,
                    int score) {
 
-        this.id = id;
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.description = description;
         this.tag = tag;
         this.difficulty = difficulty;
         this.score = score;
-
         this.likes = 0;
         this.solutions = new ArrayList<>();
     }

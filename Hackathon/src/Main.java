@@ -1,24 +1,40 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import com.interview.practice.model.Difficulty;
+import com.interview.practice.model.Problem;
+import com.interview.practice.model.User;
+import com.interview.practice.repository.ProblemRepository;
+import com.interview.practice.repository.SolutionRepository;
+import com.interview.practice.repository.UserRepository;
+import com.interview.practice.service.ContestService;
+import com.interview.practice.service.ProblemService;
+import com.interview.practice.service.UserService;
+import com.interview.practice.statergy.DefaultScoringStatergy;
+import com.interview.practice.statergy.ScoringStatergy;
+
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        //----------------------------------
         // Repositories
-        InMemoryUserRepository userRepository =
-                new InMemoryUserRepository();
+        //----------------------------------
 
-        InMemoryProblemRepository problemRepository =
-                new InMemoryProblemRepository();
+        UserRepository userRepository = new UserRepository();
+        ProblemRepository problemRepository = new ProblemRepository();
+        SolutionRepository solutionRepository = new SolutionRepository();
 
-        InMemorySolutionRepository solutionRepository =
-                new InMemorySolutionRepository();
-
+        //----------------------------------
         // Strategy
-        ScoringStrategy scoringStrategy =
-                new DefaultScoringStrategy();
+        //----------------------------------
 
+        ScoringStatergy scoringStrategy =
+                new DefaultScoringStatergy();
+
+        //----------------------------------
         // Services
+        //----------------------------------
+
         UserService userService =
                 new UserService(userRepository);
 
@@ -33,46 +49,45 @@ public class Main {
                         scoringStrategy
                 );
 
-        //----------------------------
+        //----------------------------------
         // Register Users
-        //----------------------------
+        //----------------------------------
 
-        User prasun = userService.addUser(
-                "Prasun",
-                "Engineering"
-        );
+        User prasun =
+                userService.addUser(
+                        "Prasun",
+                        "Engineering"
+                );
 
-        User rahul = userService.addUser(
-                "Rahul",
-                "Computer Science"
-        );
+        User rahul =
+                userService.addUser(
+                        "Rahul",
+                        "Computer Science"
+                );
 
-        //----------------------------
+        //----------------------------------
         // Add Problems
-        //----------------------------
+        //----------------------------------
 
         Problem p1 = new Problem(
-                "P1",
                 "Two Sum",
-                "Find two numbers",
+                "Find two numbers whose sum equals target",
                 "Array",
                 Difficulty.EASY,
                 100
         );
 
         Problem p2 = new Problem(
-                "P2",
                 "Word Ladder",
-                "Shortest Transformation",
+                "Shortest transformation sequence",
                 "Graph",
                 Difficulty.HARD,
                 300
         );
 
         Problem p3 = new Problem(
-                "P3",
                 "Coin Change",
-                "Minimum Coins",
+                "Minimum number of coins",
                 "DP",
                 Difficulty.MEDIUM,
                 200
@@ -82,9 +97,9 @@ public class Main {
         problemService.addProblem(p2);
         problemService.addProblem(p3);
 
-        //----------------------------
+        //----------------------------------
         // Solve Problems
-        //----------------------------
+        //----------------------------------
 
         contestService.solve(
                 prasun.getId(),
@@ -104,63 +119,60 @@ public class Main {
                 180
         );
 
-        //----------------------------
+        //----------------------------------
         // Fetch Solved Problems
-        //----------------------------
+        //----------------------------------
 
-        System.out.println("Solved by Prasun:");
+        System.out.println("Problems solved by Prasun:");
 
-        for (Problem p : contestService.fetchSolvedProblems(prasun.getId())) {
+        List<Problem> solvedProblems =
+                contestService.fetchSolvedProblems(prasun.getId());
 
-            System.out.println(
-                    p.getName()
-            );
+        for (Problem problem : solvedProblems) {
+            System.out.println(problem.getName());
         }
 
-        //----------------------------
+        //----------------------------------
         // Problem Statistics
-        //----------------------------
+        //----------------------------------
 
         System.out.println();
+        System.out.println("Problem Statistics");
+        System.out.println("------------------");
 
-        System.out.println("Problem : " + p1.getName());
+        System.out.println("Problem       : " + p1.getName());
+        System.out.println("Solved Count  : " + p1.getSolvedCount());
+        System.out.println("Average Time  : " + p1.getAverageTime());
 
-        System.out.println("Solved Count : "
-                + p1.getSolvedCount());
-
-        System.out.println("Average Time : "
-                + p1.getAverageTime());
-
-        //----------------------------
+        //----------------------------------
         // Leader
-        //----------------------------
+        //----------------------------------
 
         User leader = contestService.getLeader();
 
         System.out.println();
-
-        System.out.println("Leader");
+        System.out.println("Current Leader");
+        System.out.println("--------------");
 
         System.out.println(
-                leader.getName()
-                        + " - "
-                        + leader.getDepartment()
+                leader.getName() +
+                        " (" +
+                        leader.getDepartment() +
+                        ")"
         );
 
-        //----------------------------
+        //----------------------------------
         // Top Problems
-        //----------------------------
-
-        List<Problem> topDPProblems =
-                problemService.getTopNProblems("DP", 10);
+        //----------------------------------
 
         System.out.println();
-
         System.out.println("Top DP Problems");
 
-        for (Problem problem : topDPProblems) {
+        List<Problem> topProblems =
+                problemService.getTopNProblems("DP", 10);
+
+        for (Problem problem : topProblems) {
             System.out.println(problem.getName());
         }
-
     }
 }

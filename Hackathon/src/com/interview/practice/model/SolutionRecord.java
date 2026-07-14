@@ -1,14 +1,30 @@
 package com.interview.practice.model;
 
-class SolutionRecord{
+public class SolutionRecord {
 
-    private User user;
-    private Problem problem;
+    private final User user;
+    private final Problem problem;
+    private final long timeTaken;
 
-    private long startTime;
-    private long endTime;
+    public SolutionRecord(User user,
+                          Problem problem,
+                          long timeTaken) {
+        this.user = user;
+        this.problem = problem;
+        this.timeTaken = timeTaken;
+    }
 
-    public long getTimeTaken(){
-        return endTime-startTime;
+    public User getUser() {
+        return user;
+    }
+
+    public Problem getProblem() {
+        return problem;
+    }
+
+    public long getTimeTaken() {
+        return timeTaken;
     }
 }
+
+

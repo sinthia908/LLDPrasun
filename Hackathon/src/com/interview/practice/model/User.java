@@ -1,11 +1,8 @@
 package com.interview.practice.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.interview.practice.statergy.ScoringStatergy;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class User {
 
@@ -16,8 +13,8 @@ public class User {
     // Problems solved by this user
     private final List<SolutionRecord> solvedProblems;
 
-    public User(String id, String name, String department) {
-        this.id = id;
+    public User(String name, String department) {
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.department = department;
         this.solvedProblems = new ArrayList<>();
@@ -47,7 +44,7 @@ public class User {
         return solvedProblems.size();
     }
 
-    public int getScore(ScoringStrategy scoringStrategy) {
+    public int getScore(ScoringStatergy scoringStrategy) {
         return scoringStrategy.calculateScore(this);
     }
 }

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class InMemoryProblemRepository {
+public class ProblemRepository {
 
     private final Map<String, Problem> problems = new HashMap<>();
 
