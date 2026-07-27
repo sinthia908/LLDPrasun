@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class TokenBucketStrategy implements IRateLimiter {
     private final int bucketCapacity;  // Maximum tokens per bucket.
-    private volatile int refreshRate;  // Tokens added per refill i   nterval (per second).
+    private volatile int refreshRate;  // Tokens added per refill interval (per second).
 
     // Global token bucket used when no key is provided.
     private final Bucket globalBucket;
@@ -99,7 +99,7 @@ public class TokenBucketStrategy implements IRateLimiter {
     }
 
     /**
-     * Checks if a request is allowed.
+     * `Checks if a request is allowed.
      * If a non-null, non‑empty key is provided, a per‑user bucket is used; otherwise, the global bucket is used.
      */
     @Override
