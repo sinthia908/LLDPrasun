@@ -1,4 +1,15 @@
 package com.interview.practice.GameStateHandler.ConcreteStates;
 
-public class OWonState {
+import com.interview.practice.GameStateHandler.GameState;
+
+public class OWonState implements GameState {
+    @Override
+    public void next(GameContext context, Player player, boolean hasWon) {
+
+    }
+
+    @Override
+    public boolean isGameOver() {
+        return false;
+    }
 }

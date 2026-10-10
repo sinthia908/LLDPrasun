@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AutoCompleteEngine/AutoCompleteEngine.iml" filepath="$PROJECT_DIR$/AutoCompleteEngine/AutoCompleteEngine.iml" />
       <module fileurl="file://$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" filepath="$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" filepath="$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/CustomerSupportAgentRatingSystem/CustomerSupportAgentRatingSystem.iml" filepath="$PROJECT_DIR$/CustomerSupportAgentRatingSystem/CustomerSupportAgentRatingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/DIgitalWallet/DIgitalWallet.iml" filepath="$PROJECT_DIR$/DIgitalWallet/DIgitalWallet.iml" />
       <module fileurl="file://$PROJECT_DIR$/Elevator/Elevator.iml" filepath="$PROJECT_DIR$/Elevator/Elevator.iml" />
@@ -21,6 +22,8 @@
       <module fileurl="file://$PROJECT_DIR$/RateLimiter/RateLimiter.iml" filepath="$PROJECT_DIR$/RateLimiter/RateLimiter.iml" />
       <module fileurl="file://$PROJECT_DIR$/SnakeAndLadder/SnakeAndLadder.iml" filepath="$PROJECT_DIR$/SnakeAndLadder/SnakeAndLadder.iml" />
       <module fileurl="file://$PROJECT_DIR$/Splitwise/Splitwise.iml" filepath="$PROJECT_DIR$/Splitwise/Splitwise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TicTacToe/TicTacToe.iml" filepath="$PROJECT_DIR$/TicTacToe/TicTacToe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VendingMachine/VendingMachine.iml" filepath="$PROJECT_DIR$/VendingMachine/VendingMachine.iml" />
     </modules>
   </component>
 </project>

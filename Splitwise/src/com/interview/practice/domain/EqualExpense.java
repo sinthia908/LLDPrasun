@@ -6,17 +6,37 @@ import java.util.List;
 
 public class EqualExpense extends Expense {
 
-    public EqualExpense(double amount, User paidBy, List<Split> splitList, ExpenseMetaData expenseMetaData) {
+    private static final double EPSILON = 0.001;
+
+    public EqualExpense(
+            double amount,
+            User paidBy,
+            List<Split> splitList,
+            ExpenseMetaData expenseMetaData) {
+
         super(amount, paidBy, splitList, expenseMetaData);
-       }
+    }
 
     @Override
     public boolean validate() {
-        for(Split split: getSplits()){
-            if (!(split instanceof Split)){
+
+        List<Split> splits = getSplits();
+
+        if (splits == null || splits.isEmpty()) {
+            return false;
+        }
+
+        double totalSplitAmount = 0;
+
+        for (Split split : splits) {
+
+            if (split == null || split.getAmount() < 0) {
                 return false;
             }
+
+            totalSplitAmount += split.getAmount();
         }
-        return true;
+
+        return Math.abs(totalSplitAmount - getAmount()) < EPSILON;
     }
 }

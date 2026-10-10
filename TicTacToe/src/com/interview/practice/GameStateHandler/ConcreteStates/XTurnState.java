@@ -3,7 +3,7 @@ package com.interview.practice.GameStateHandler.ConcreteStates;
 import com.interview.practice.CommonEnum.Symbol;
 import com.interview.practice.GameStateHandler.GameState;
 
-public class XTurnSate implements GameState {
+public class XTurnState implements GameState {
 
     @Override
     public void next(GameContext context, Player player , boolean hasWon) {

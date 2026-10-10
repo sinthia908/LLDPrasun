@@ -5,31 +5,45 @@ import com.interview.practice.statergy.Split;
 
 import java.util.List;
 
-public class ExactExpense extends Expense{
+public class ExactExpense extends Expense {
 
-    public ExactExpense(double amount, User paidBy, List<Split> splitList, ExpenseMetaData expenseMetaData) {
+    private static final double EPSILON = 0.001;
+
+    public ExactExpense(
+            double amount,
+            User paidBy,
+            List<Split> splitList,
+            ExpenseMetaData expenseMetaData) {
+
         super(amount, paidBy, splitList, expenseMetaData);
     }
 
     @Override
     public boolean validate() {
-        for(Split split: getSplits()){
-            if (!(split instanceof Split)){
+
+        List<Split> splits = getSplits();
+
+        if (splits == null || splits.isEmpty()) {
+            return false;
+        }
+
+        double totalSplitAmount = 0;
+
+        for (Split split : splits) {
+
+            if (!(split instanceof ExactSplit)) {
                 return false;
             }
-        }
 
-        double totalAmount = getAmount();
-        double sumSplitAmount = 0;
-
-        for(Split split: getSplits()){
             ExactSplit exactSplit = (ExactSplit) split;
-            sumSplitAmount += exactSplit.getAmount();
+
+            if (exactSplit.getAmount() < 0) {
+                return false;
+            }
+
+            totalSplitAmount += exactSplit.getAmount();
         }
 
-        if (sumSplitAmount != totalAmount)
-            return false;
-
-        return true;
+        return Math.abs(totalSplitAmount - getAmount()) < EPSILON;
     }
 }

@@ -11,6 +11,4 @@ public class ExpenseMetaData {
            this.imgURL = imgURL;
            this.notes = notes;
     }
-
-
 }
