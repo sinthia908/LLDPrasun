@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AutoCompleteEngine/AutoCompleteEngine.iml" filepath="$PROJECT_DIR$/AutoCompleteEngine/AutoCompleteEngine.iml" />
       <module fileurl="file://$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" filepath="$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarRental/CarRental.iml" filepath="$PROJECT_DIR$/CarRental/CarRental.iml" />
       <module fileurl="file://$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" filepath="$PROJECT_DIR$/CarRentalSystem/CarRentalSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/CustomerSupportAgentRatingSystem/CustomerSupportAgentRatingSystem.iml" filepath="$PROJECT_DIR$/CustomerSupportAgentRatingSystem/CustomerSupportAgentRatingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/DIgitalWallet/DIgitalWallet.iml" filepath="$PROJECT_DIR$/DIgitalWallet/DIgitalWallet.iml" />
