@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ATMMachine/ATMMachine.iml" filepath="$PROJECT_DIR$/ATMMachine/ATMMachine.iml" />
       <module fileurl="file://$PROJECT_DIR$/AutoCompleteEngine/AutoCompleteEngine.iml" filepath="$PROJECT_DIR$/AutoCompleteEngine/AutoCompleteEngine.iml" />
       <module fileurl="file://$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" filepath="$PROJECT_DIR$/BrowserBackButton/BrowserBackHistory.iml" />
       <module fileurl="file://$PROJECT_DIR$/CarRental/CarRental.iml" filepath="$PROJECT_DIR$/CarRental/CarRental.iml" />
