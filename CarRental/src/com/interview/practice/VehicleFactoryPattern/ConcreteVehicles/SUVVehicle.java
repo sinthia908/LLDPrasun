@@ -1,4 +1,16 @@
 package com.interview.practice.VehicleFactoryPattern.ConcreteVehicles;
 
-public class SUVVehicle {
+import com.interview.practice.CommonEnums.VehicleEnums.VehicleType;
+import com.interview.practice.VehicleFactoryPattern.Vehicle;
+
+public class SUVVehicle extends Vehicle {
+    private static final double RATE_MULTIPLIER = 1.5;
+    public SUVVehicle(String registrationNumber, String model, VehicleType type, double baseRentalPrice) {
+        super(registrationNumber, model, type, baseRentalPrice);
+    }
+
+    @Override
+    public double calculateRentalFee(int days) {
+        return getBaseRentalPrice() * days * RATE_MULTIPLIER;
+    }
 }

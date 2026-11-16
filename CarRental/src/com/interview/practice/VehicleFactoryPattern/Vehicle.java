@@ -1,5 +1,8 @@
 package com.interview.practice.VehicleFactoryPattern;
 
+import com.interview.practice.CommonEnums.VehicleEnums.VehicleStatus;
+import com.interview.practice.CommonEnums.VehicleEnums.VehicleType;
+
 public abstract class Vehicle {
 
     private String registrationNumber;

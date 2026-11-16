@@ -105,7 +105,7 @@ public class TokenBucketStrategy implements IRateLimiter {
     @Override
     public boolean giveAccess(String rateLimitKey) {
         if (rateLimitKey != null && !rateLimitKey.isEmpty()) {
-            // Use a per‑user bucket (always created with the same key for a given user).
+            // Use a per‑user bucket (always created with the sa}"=[me key for a given user).
             Bucket bucket = userBuckets.computeIfAbsent(rateLimitKey, key -> new Bucket(bucketCapacity));
             return bucket.tryConsume();
         } else {
